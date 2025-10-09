@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Kings&family=Metamorphous&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+#main_card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 1rem;
+  padding: 5px;
+  background-color: #454545;
+  color: var(--card-text, #f8f8f8); /* Use light text by default */
+}
+
+#textbox {
+  font-family: "Metamorphous", serif;
+  font-weight: 80;
+}
+
+#card_image {
+  grid-column: 1;
+  max-width: 100%;
+  min-width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#oracle_text {
+  grid-column: 2;
+  font-family: "Metamorphous", serif;
+  overflow: hidden; /* prevents text overflow */
+  text-overflow: ellipsis; /* optional: adds “…” if text is too long */
+  white-space: pre-wrap;
+}
+
+#extra_info {
+  display: flex;
+  justify-content: center;
+  white-space: pre;
+}
+
+#title {
+  font-family: "Kings", cursive;
+}
+
+/* Make the layout stack vertically on small screens */
+@media (max-width: 800px) {
+  #main_card {
+    grid-template-columns: 1fr; /* Single column layout */
+    justify-items: center;
+    text-align: center;
+  }
+
+  #card_image {
+    grid-column: 1;
+    order: -1; /* ensure image appears above text */
+    width: 90%;
+    max-width: 400px; /* optional cap */
+  }
+
+  #oracle_text {
+    grid-column: 1;
+    width: 90%;
+  }
+}

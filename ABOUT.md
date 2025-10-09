@@ -1,0 +1,5 @@
+API link: https://scryfall.com/docs/api
+
+Preview Link: https://n2g663-5173.csb.app/ 
+
+My API based application is a mtg themed commander deckbuilding challange that gives you a random commander from Scryfall's API and prompts you to build a deck around that card.  The site prominently features the commander at the top of the page with a gradient based on the color identity of the card.  It also displays an image of the card with an additional oracle text section next to it (in case it's hard to read).  Scrolling down will reveal the card search and decklist sections.  The search is pre-filtered to only display cards that fit within the color identity of the commander.  The decklist is a simple list of cards, but each name is also a link to the scryfall page for the card in case you want more information on it.  To remove cards from the deck, simply press the remove button.  There are not currently limits in the decklist section around card count (100+ cards), but it does follow the singleton format.
