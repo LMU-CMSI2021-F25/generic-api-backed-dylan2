@@ -35,6 +35,7 @@ export default function CommanderView(props) {
   }, []);
 
   function getShadowStyle(identity) {
+    //Analyze the commander's color identity to get color scheme for main card
     if (!identity || identity.length === 0) {
       return {
         boxShadow: "0 0 25px 5px rgba(200, 200, 200, 0.5)", // colorless fallback
@@ -74,6 +75,8 @@ export default function CommanderView(props) {
           alt={commander.name}
         />
         <div id="textbox">
+          {" "}
+          {/*Commander description textbox */}
           <h1 id="name">{commander.name}</h1>
           <div id="extra_info">
             <p>Color Identity: </p>{" "}

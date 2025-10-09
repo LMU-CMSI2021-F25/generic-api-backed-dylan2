@@ -8,8 +8,8 @@ export default function SearchView({ commander, deck, setDeck }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Check if a card fits within the Commander’s color identity
   function isCardLegalByColor(card) {
+    // Check if a card fits within the Commander’s color identity
     if (!commander || !commander.color_identity) return true;
     const commanderColors = commander.color_identity;
     const cardColors = card.color_identity || [];
@@ -19,9 +19,9 @@ export default function SearchView({ commander, deck, setDeck }) {
     return cardColors.every((c) => commanderColors.includes(c));
   }
 
-  // Search cards to add to deck
   async function handleSearch(e) {
-    e.preventDefault()
+    // Search cards to add to deck
+    e.preventDefault();
     setLoading(true);
     const cards = await searchCards(searchTerm);
     const legalCards = cards.filter(isCardLegalByColor);
@@ -58,7 +58,11 @@ export default function SearchView({ commander, deck, setDeck }) {
         <div>
           {searchResults.map((card) => (
             <div key={card.id}>
-              <img id='result_image' src={card.image_uris?.normal} alt={card.name} />
+              <img
+                id="result_image"
+                src={card.image_uris?.normal}
+                alt={card.name}
+              />
               <p>{card.name}</p>
               <button onClick={() => addToDeck(card)}>Add to Deck</button>
             </div>

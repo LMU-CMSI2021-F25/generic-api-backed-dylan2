@@ -1,4 +1,5 @@
 export async function fetchCommander() {
+  //Grab random commander from scryfall api
   const res = await fetch(
     "https://api.scryfall.com/cards/random?q=is%3Acommander"
   );
@@ -7,6 +8,7 @@ export async function fetchCommander() {
 }
 
 export async function searchCards(searchTerm) {
+  //Search from scryfall api
   if (!searchTerm) return [];
 
   const response = await fetch(
@@ -21,5 +23,5 @@ export async function searchCards(searchTerm) {
   }
 
   const data = await response.json();
-  return data.data// || [];
+  return data.data || [];
 }

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Metamorphous&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 #searchbox {
-    background-color: #000000;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Metamorphous', serif;
+  background-color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Metamorphous", serif;
 }
 
-#result_image{
-    border-radius: 20px;
+#result_image {
+  border-radius: 20px;
 }
