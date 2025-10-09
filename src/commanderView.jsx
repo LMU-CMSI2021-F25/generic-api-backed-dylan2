@@ -71,7 +71,7 @@ export default function CommanderView(props) {
       <div id="main_card" style={getShadowStyle(commander.color_identity)}>
         <img
           id="card_image"
-          src={commander.image_uris?.normal}
+          src={commander.card_faces ? commander.card_faces?.image_uris?.normal :  commander.image_uris?.normal}
           alt={commander.name}
         />
         <div id="textbox">

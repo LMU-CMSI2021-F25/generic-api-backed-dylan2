@@ -1,8 +1,7 @@
 export async function fetchCommander() {
-  //Grab random commander from scryfall api
-  const res = await fetch(
-    "https://api.scryfall.com/cards/random?q=is%3Acommander"
-  );
+ const res = await fetch(
+    "https://api.scryfall.com/cards/random?q=is:commander+-layout:transform+-layout:modal_dfc+-layout:meld+-layout:flip+-layout:split"
+ );
   const data = await res.json();
   return data;
 }
